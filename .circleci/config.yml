@@ -28,8 +28,8 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-      #    command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test:cov
-          command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test
+          command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test:cov
+      #    command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test
           name: Run tests
       - run:
           command: npm run build
