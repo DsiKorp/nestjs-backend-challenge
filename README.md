@@ -17,7 +17,7 @@ or update. Every request must only accept this `Content-type: application/json`.
 ### How to run locally coveralls
 
 ```
-COVERALLS_REPO_TOKEN=gLskLgZ58OYgHYPem2MLSnox65zICVe8t npm run test:cov
+COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test:cov
 ```
 
 ### Features
