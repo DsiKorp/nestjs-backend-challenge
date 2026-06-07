@@ -1,0 +1,23 @@
+# Postgres data
+/postgres_data
+
+# Node modules
+/node_modules
+
+# Build output
+/dist
+/build
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+# Allow test and example env files
+!.env.test
+!.env.example

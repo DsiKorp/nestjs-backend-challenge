@@ -1,0 +1,42 @@
+services:
+
+  api:
+    container_name: api_users_nestjs
+    command: >
+      sh -c "npm run start:prod"
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_HOST=db
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=postgres
+      - DATABASE_NAME=usersdb
+      - DATABASE_SYNC=true
+      - POKEMON_API_URL=https://pokeapi.co/api/v2
+    restart: unless-stopped
+
+  db:
+    image: postgres:18-alpine
+    container_name: postgres_usersdb
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: usersdb
+    volumes:
+      - ./postgres_data/db:/var/lib/postgresql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
