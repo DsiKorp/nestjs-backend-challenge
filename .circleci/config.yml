@@ -28,8 +28,7 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test:cov
-      #    command: COVERALLS_REPO_TOKEN=x2r2me4UOXNbPJw8Ia6eeD5rsYYOd4Danz3I npm run test
+          command: ./node_modules/.bin/jest --coverage --config ./test/jest-e2e.json --runInBand
           name: Run tests
       - run:
           command: npm run build
