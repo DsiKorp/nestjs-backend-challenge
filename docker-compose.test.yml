@@ -4,7 +4,7 @@ services:
   api:
     container_name: api_users_test_nestjs
     command: >
-      sh -c "npm run test:e2e"
+      sh -c "npx jest --config ./test/jest-e2e.json"
     depends_on:
       db:
         condition: service_healthy
