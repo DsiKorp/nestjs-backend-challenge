@@ -10,7 +10,7 @@ or update. Every request must only accept this `Content-type: application/json`.
 
 ### Badges
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/DsiKorp/nestjs-backend-challenge/tree/master.svg?style=svg)](https://app.circleci.com/pipelines/github/DsiKorp/nestjs-backend-challenge?branch=master)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/DsiKorp/nestjs-backend-challenge/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/DsiKorp/nestjs-backend-challenge/tree/main)
 
 [![Coverage Status](https://coveralls.io/repos/github/yaritaft/cursor-backend-challenge/badge.svg)](https://coveralls.io/github/yaritaft/cursor-backend-challenge)
 
